@@ -20,5 +20,4 @@ export const Wrapper = styled('div')`
   box-sizing: border-box;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 `
