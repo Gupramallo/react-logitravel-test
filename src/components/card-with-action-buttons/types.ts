@@ -6,4 +6,5 @@ export type CardWithActionButtonProps = PropsWithChildren & {
   centeredText?: boolean
   leftButtons?: ReactNode
   rightButtons?: ReactNode
+  className?: string
 }

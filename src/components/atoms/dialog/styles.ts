@@ -1,11 +1,14 @@
 import { css, styled } from '@mui/material'
 
 export const BackdropWrapper = styled('div')<{ open?: boolean }>`
-  position: fixed;
-  inset: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1300;
 

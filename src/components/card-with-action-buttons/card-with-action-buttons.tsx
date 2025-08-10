@@ -16,8 +16,9 @@ const CardWithActionButtons: React.FC<CardWithActionButtonProps> = ({
   centeredText = false,
   leftButtons,
   rightButtons,
+  className,
 }) => (
-  <Card>
+  <Card className={className}>
     <TextContainer>
       {title && (
         <Text centered={centeredText} variant="h3">
