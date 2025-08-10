@@ -49,7 +49,7 @@ export const useItemsStore = create<ItemsStore>()(
             items: items.filter((item) => item.id !== id),
             lastAction: {
               value: ACTIONS.delete,
-              items: [itemToDelete],
+              items: [{ ...itemToDelete, selected: true }],
             },
           })
         }
