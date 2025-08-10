@@ -6,13 +6,8 @@ import AddButton from '../../atoms/buttons/add-button'
 import CancelButton from '../../atoms/buttons/cancel-button'
 import { useAddItemDialog } from './use-add-item-dialog'
 
-const AddItemDialog: React.FC<AddItemDialogProps> = ({
-  open,
-  onClick,
-  closeDialog,
-}) => {
+const AddItemDialog: React.FC<AddItemDialogProps> = ({ open, closeDialog }) => {
   const { textFieldRef, error, handleClose, handleSubmit } = useAddItemDialog({
-    onClick,
     open,
     closeDialog,
   })

@@ -27,7 +27,6 @@ const MainPage: React.FC = () => {
       />
       <AddItemDialog
         open={openDialog}
-        onClick={() => {}}
         closeDialog={() => setOpenDialog(false)}
       />
     </Layout>
