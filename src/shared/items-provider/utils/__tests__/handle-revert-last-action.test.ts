@@ -3,21 +3,22 @@ import { handleRevertLastAction } from '../handle-revert-last-action'
 import { ACTIONS } from '../../constants'
 import type { Item } from '../../../types'
 import type { LastAction } from '../../types'
-
-const firstItem = { id: 1, name: 'Item 1', selected: false }
-const secondItem = { id: 2, name: 'Item 2', selected: true }
-const thirdItem = { id: 3, name: 'Item 3', selected: false }
-const fourthItem = { id: 4, name: 'Item 4', selected: true }
-const mockItems: Item[] = [firstItem, secondItem, thirdItem]
-const remainingItems: Item[] = [thirdItem]
-const deletedItems: Item[] = [secondItem]
+import {
+  deletedItems,
+  firstItem,
+  fourthItem,
+  mockItems,
+  remainingItems,
+  secondItem,
+  thirdItem,
+} from '../__mocks__/item-provider-utils-mocks'
 
 describe('handleRevertLastAction', () => {
   describe('when reverting ADD action', () => {
     it('should remove the last added item', () => {
       const lastAction: LastAction = {
         value: ACTIONS.add,
-        items: [thirdItem],
+        items: [fourthItem],
       }
 
       const result = handleRevertLastAction({
@@ -25,7 +26,7 @@ describe('handleRevertLastAction', () => {
         lastAction,
       })
 
-      expect(result).toEqual([firstItem, secondItem])
+      expect(result).toEqual([firstItem, secondItem, thirdItem])
     })
 
     it('should handle lastAction with no items property for ADD', () => {
@@ -38,7 +39,7 @@ describe('handleRevertLastAction', () => {
         lastAction,
       })
 
-      expect(result).toEqual([firstItem, secondItem])
+      expect(result).toEqual([firstItem, secondItem, thirdItem])
     })
   })
 
