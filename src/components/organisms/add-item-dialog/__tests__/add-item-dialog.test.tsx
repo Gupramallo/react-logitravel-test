@@ -1,8 +1,8 @@
 import { screen, fireEvent } from '@testing-library/react'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { renderWithTheme } from '../../../../test/render-with-theme'
 import AddItemDialog from '../add-item-dialog'
 import * as useAddItemDialogModule from '../use-add-item-dialog'
-import { renderWithTheme } from '../../../../test/render-with-theme'
 
 const mockHandleClose = vi.fn()
 const mockHandleSubmit = vi.fn()

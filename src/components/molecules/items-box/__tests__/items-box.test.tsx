@@ -1,14 +1,14 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import ItemsBox from '../items-box'
-import theme from '../../../../styles'
-import { renderWithTheme } from '../../../../test/render-with-theme'
 import {
   firstItem,
   mockItems,
   secondItem,
   thirdItem,
 } from '../../../../shared/items-provider/utils/__mocks__/item-provider-utils-mocks'
+import theme from '../../../../styles'
+import { renderWithTheme } from '../../../../test/render-with-theme'
+import ItemsBox from '../items-box'
 
 const mockOnClick = vi.fn()
 const mockOnDoubleClick = vi.fn()

@@ -1,7 +1,7 @@
-import { describe, it, expect } from 'vitest'
-import CardWithActionButtons from '../card-with-action-buttons'
-import { renderWithTheme } from '../../../../test/render-with-theme'
 import { screen } from '@testing-library/dom'
+import { describe, it, expect } from 'vitest'
+import { renderWithTheme } from '../../../../test/render-with-theme'
+import CardWithActionButtons from '../card-with-action-buttons'
 
 describe('CardWithActionButtons', () => {
   it('should render with minimal props', () => {

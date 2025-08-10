@@ -1,6 +1,6 @@
 import type React from 'react'
-import { Block, Container } from './styles'
 import { Typography } from '@mui/material'
+import { Block, Container } from './styles'
 import type { ItemsBoxProps } from './types'
 
 const ItemsBox: React.FC<ItemsBoxProps> = ({

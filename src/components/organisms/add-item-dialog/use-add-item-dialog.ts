@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import type { AddItemDialogProps } from './types'
 import { useItemsContext } from '../../../shared/items-provider/context'
+import type { AddItemDialogProps } from './types'
 
 export const useAddItemDialog = ({ open, closeDialog }: AddItemDialogProps) => {
   const { setNewItem } = useItemsContext()

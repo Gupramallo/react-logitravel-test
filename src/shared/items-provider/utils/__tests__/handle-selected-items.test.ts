@@ -1,8 +1,4 @@
 import { describe, it, expect } from 'vitest'
-import {
-  handleSelectedItem,
-  handleDeleteSelectedItems,
-} from '../handle-selected-items'
 import type { Item } from '../../../types'
 import {
   firstItem,
@@ -11,6 +7,10 @@ import {
   secondItem,
   thirdItem,
 } from '../__mocks__/item-provider-utils-mocks'
+import {
+  handleSelectedItem,
+  handleDeleteSelectedItems,
+} from '../handle-selected-items'
 
 describe('handleSelectedItem', () => {
   it('should toggle selected state of the clicked item from false to true', () => {

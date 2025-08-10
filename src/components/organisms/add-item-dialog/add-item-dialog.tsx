@@ -1,9 +1,9 @@
 import React from 'react'
-import type { AddItemDialogProps } from './types'
-import Dialog from '../../atoms/dialog'
-import { Input, InputCard } from './styles'
 import AddButton from '../../atoms/buttons/add-button'
 import CancelButton from '../../atoms/buttons/cancel-button'
+import Dialog from '../../atoms/dialog'
+import { Input, InputCard } from './styles'
+import type { AddItemDialogProps } from './types'
 import { useAddItemDialog } from './use-add-item-dialog'
 
 const AddItemDialog: React.FC<AddItemDialogProps> = ({ open, closeDialog }) => {

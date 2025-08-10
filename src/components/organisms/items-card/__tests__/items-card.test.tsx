@@ -1,11 +1,11 @@
 import { screen, fireEvent } from '@testing-library/react'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import ItemsCard from '../items-card'
-import { renderWithTheme } from '../../../../test/render-with-theme'
 import {
   firstItem,
   mockItems,
 } from '../../../../shared/items-provider/utils/__mocks__/item-provider-utils-mocks'
+import { renderWithTheme } from '../../../../test/render-with-theme'
+import ItemsCard from '../items-card'
 
 describe('ItemsCard', () => {
   const mockOpenDialog = vi.fn()

@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { handleRevertLastAction } from '../handle-revert-last-action'
-import { ACTIONS } from '../../constants'
 import type { Item } from '../../../types'
+import { ACTIONS } from '../../constants'
 import type { LastAction } from '../../types'
 import {
   deletedItems,
@@ -12,6 +11,7 @@ import {
   secondItem,
   thirdItem,
 } from '../__mocks__/item-provider-utils-mocks'
+import { handleRevertLastAction } from '../handle-revert-last-action'
 
 describe('handleRevertLastAction', () => {
   describe('when reverting ADD action', () => {

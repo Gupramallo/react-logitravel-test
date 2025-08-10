@@ -1,4 +1,4 @@
-import { useMemo, type PropsWithChildren } from 'react'
+import React, { useMemo, type PropsWithChildren } from 'react'
 import { ItemsContext } from './context'
 import { useItemsStore } from './store'
 

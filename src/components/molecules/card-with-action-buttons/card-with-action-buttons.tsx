@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../../atoms/card'
-import type { CardWithActionButtonProps } from './types'
 import {
   ActionButtonsContainer,
   LeftActionButtons,
@@ -8,6 +7,7 @@ import {
   Text,
   TextContainer,
 } from './styles'
+import type { CardWithActionButtonProps } from './types'
 
 const CardWithActionButtons: React.FC<CardWithActionButtonProps> = ({
   title,

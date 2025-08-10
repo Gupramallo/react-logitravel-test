@@ -1,3 +1,4 @@
+import React from 'react'
 import AddButton from '../../atoms/buttons/add-button'
 import DeleteButton from '../../atoms/buttons/delete-button'
 import RevertButton from '../../atoms/buttons/revert-button'
