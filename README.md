@@ -1,69 +1,95 @@
-# React + TypeScript + Vite
+# React Logitravel Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- **Modern Tech Stack**: React 19, TypeScript, Vite
+- **UI Framework**: Material-UI (MUI) v7 with custom theming
+- **State Management**: Zustand with localStorage persistence
+- **Design System**: Atomic Design Pattern (Atoms, Molecules, Organisms, Templates)
+- **Testing**: Comprehensive test suite with Vitest and React Testing Library
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+### Core Dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** 19.1.1 - Modern React with concurrent features
+- **TypeScript** 5.6.2 - Type-safe development
+- **Vite** 6.0.3 - Fast build tool and dev server
+- **Material-UI** 7.3.1 - Comprehensive React UI framework
+- **Zustand** 5.0.7 - Lightweight state management
+- **@fontsource/montserrat** - Custom typography
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Testing & Quality
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Vitest** 3.2.4 - Fast unit testing framework
+- **React Testing Library** 16.3.0 - Component testing utilities
+- **ESLint** - Code linting and quality enforcement
+- **jsdom** - DOM testing environment
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Yarn or npm
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone <repository-url>
+cd react-logitravel-test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Install dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+yarn install
 ```
+
+3. **Start development server**
+
+```bash
+yarn dev
+```
+
+4. **Run tests**
+
+```bash
+yarn test
+```
+
+## Available Scripts
+
+- `yarn dev` - Start development server
+- `yarn build` - Build for production
+- `yarn preview` - Preview production build
+- `yarn test` - Run test suite
+- `yarn test --coverage` - Run tests with coverage report
+- `yarn lint` - Run ESLint
+
+## Testing Commands
+
+```bash
+# Run all tests
+yarn test
+
+# Run tests in watch mode
+yarn test --watch
+
+# Run tests with coverage
+yarn test --coverage
+
+# Run specific test file
+yarn test items-card.test.tsx
+
+# Run tests matching pattern
+yarn test --run add-item
+```
+
+## License
+
+This project is created for demonstration purposes as part of a technical assessment.
+
+---
