@@ -1,8 +1,4 @@
-export type Item = {
-  id: number
-  name: string
-  selected?: boolean
-}
+import type { Item } from '../../shared/types'
 
 export type ItemsBoxProps = {
   items?: Item[]
