@@ -8,8 +8,8 @@ const palette = {
   },
   background: {
     paper: '#fff',
-    main: '#f7f7f7',
-    secondary: '#a1c4fd',
+    main: '#a1c4fd',
+    secondary: '#f7f7f7',
   },
   text: {
     primary: '#333333',
