@@ -1,0 +1,6 @@
+import { ThemeProvider } from '@mui/material'
+import { render } from '@testing-library/react'
+import theme from '../styles'
+
+export const renderWithTheme = (ui: React.ReactElement) =>
+  render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)
