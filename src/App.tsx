@@ -1,15 +1,16 @@
 import '@fontsource/montserrat'
 import './App.css'
-import { ThemeProvider, Typography } from '@mui/material'
+import { ThemeProvider } from '@mui/material'
 import theme from './styles/theme'
-import Layout from './components/layout'
+import ItemsProvider from './shared/items-provider/items-provider'
+import MainPage from './components/page'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
-        <Typography variant="h3">Hello World</Typography>
-      </Layout>
+      <ItemsProvider>
+        <MainPage />
+      </ItemsProvider>
     </ThemeProvider>
   )
 }

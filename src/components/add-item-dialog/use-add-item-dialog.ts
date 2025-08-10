@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import type { AddItemDialogProps } from './types'
+import { useItemsContext } from '../../shared/items-provider/context'
 
-export const useAddItemDialog = ({
-  open,
-  onClick,
-  closeDialog,
-}: AddItemDialogProps) => {
+export const useAddItemDialog = ({ open, closeDialog }: AddItemDialogProps) => {
+  const { setNewItem } = useItemsContext()
   const textFieldRef = useRef<HTMLInputElement>(null)
   const [error, setError] = useState(false)
   useEffect(() => {
@@ -30,7 +28,7 @@ export const useAddItemDialog = ({
       return
     }
 
-    onClick(value)
+    setNewItem(value)
     handleClose()
   }
 

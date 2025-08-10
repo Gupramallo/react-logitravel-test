@@ -3,15 +3,8 @@ import { Block, Container } from './styles'
 import { Typography } from '@mui/material'
 import type { ItemsBoxProps } from './types'
 
-const test = [
-  { name: 'Item 1', id: 8, selected: true },
-  { name: 'Item 2', id: 9, selected: false },
-  { name: 'Item 3', id: 10, selected: false },
-  { name: 'Item 4', id: 11, selected: true },
-]
-
 const ItemsBox: React.FC<ItemsBoxProps> = ({
-  items = test,
+  items = [],
   onClick,
   onDoubleClick,
 }) => (
