@@ -1,9 +1,9 @@
 import React from 'react'
-import type { PropsWithChildren } from 'react'
 import { CardWrapper } from './styles'
+import type { CardProps } from './types'
 
-const Card: React.FC<PropsWithChildren> = ({ children }) => (
-  <CardWrapper className="card">{children}</CardWrapper>
+const Card: React.FC<CardProps> = ({ children, className }) => (
+  <CardWrapper className={className}>{children}</CardWrapper>
 )
 
 export default Card
