@@ -8,7 +8,7 @@ const revertDeletedItems = ({
   itemsDeleted = [],
   items,
 }: RevertDeletedItems) => {
-  if (!itemsDeleted.length) return
+  if (!itemsDeleted.length) return []
 
   const updatedItems = [...items, ...itemsDeleted]
   const sortedItems = updatedItems.sort((a, b) => a.id - b.id)

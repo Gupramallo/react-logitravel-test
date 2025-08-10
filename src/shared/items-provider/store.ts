@@ -3,7 +3,10 @@ import { persist } from 'zustand/middleware'
 import type { Item } from '../types'
 import type { ItemsStore } from './types'
 import { ACTIONS } from './constants'
-import { handleDeleteSelectedItems, handleSelectedItem } from './utils/utils'
+import {
+  handleDeleteSelectedItems,
+  handleSelectedItem,
+} from './utils/handle-selected-items'
 import { handleRevertLastAction } from './utils/handle-revert-last-action'
 
 export const useItemsStore = create<ItemsStore>()(
