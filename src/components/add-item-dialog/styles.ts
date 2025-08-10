@@ -10,7 +10,7 @@ export const InputCard = styled(CardWithActionButtons)`
 export const Input = styled(TextField)`
   .MuiInputBase-root {
     border-radius: 0;
-    background-color: ${({ theme }) => theme.palette.background.secondary};
+    background-color: ${({ theme }) => theme.palette.background.paper};
   }
   margin-top: ${({ theme }) => theme.spacing(2.5)};
   margin-bottom: ${({ theme }) => theme.spacing(3)};

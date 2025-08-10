@@ -20,6 +20,7 @@ export const useItemsStore = create<ItemsStore>()(
           id: newId,
           selected: false,
         }
+        console.log(items)
         const updatedItems = [...items, newItem]
 
         set({
@@ -65,7 +66,7 @@ export const useItemsStore = create<ItemsStore>()(
       revertLastAction: () => {
         const { lastAction, items } = get()
 
-        if (!lastAction?.items || !items.length) return
+        if (!lastAction?.items) return
 
         const updatedItems = handleRevertLastAction({ lastAction, items })
 
@@ -77,9 +78,12 @@ export const useItemsStore = create<ItemsStore>()(
 
       deleteSelectedItems: () => {
         const { items } = get()
+
         const { updatedItems, deletedItems } = handleDeleteSelectedItems({
           items,
         })
+
+        if (!deletedItems.length) return
 
         set({
           items: updatedItems,
