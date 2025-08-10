@@ -7,9 +7,9 @@ const palette = {
     contrastText: '#333333',
   },
   background: {
-    paper: '#fff',
+    paper: '#f7f7f7',
     main: '#a1c4fd',
-    secondary: '#f7f7f7',
+    secondary: '#c2e9fb',
   },
   text: {
     primary: '#333333',

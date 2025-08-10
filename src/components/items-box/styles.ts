@@ -5,12 +5,10 @@ export const Container = styled('div')`
   flex-direction: column;
   height: ${({ theme }) => theme.spacing(28.5)};
   ${({ theme }) => css`
-    background: ${theme.palette.background.secondary} 0% 0%
-      no-repeat padding-box;
+    background: ${theme.palette.background.paper} 0% 0% no-repeat padding-box;
   `}
   ${({ theme }) => css`
-    border: ${theme.spacing(0.125)} solid
-      ${theme.palette.divider};
+    border: ${theme.spacing(0.125)} solid ${theme.palette.divider};
   `}
   opacity: 1;
   padding: ${({ theme }) => theme.spacing(1.5, 1.25)};
