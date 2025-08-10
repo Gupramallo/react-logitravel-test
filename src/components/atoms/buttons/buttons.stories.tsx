@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import AddButton from './add-button/add-button'
 import CancelButton from './cancel-button/cancel-button'
 import DeleteButton from './delete-button/delete-button'
