@@ -3,7 +3,7 @@ const typography = {
   h3: {
     fontFamily: "'Montserrat', sans-serif",
     fontSize: '2.5rem', // 40px
-    fontWeight: 500,
+    fontWeight: 700,
     letterSpacing: '0px',
     margin: 0,
   },

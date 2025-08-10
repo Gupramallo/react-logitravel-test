@@ -1,5 +1,11 @@
 import { css, styled, Typography } from '@mui/material'
 
+export const TextContainer = styled('div')`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing(1.5)};
+`
+
 export const Text = styled(Typography, {
   shouldForwardProp: (prop) => prop !== 'centered',
 })<{ centered?: boolean }>`

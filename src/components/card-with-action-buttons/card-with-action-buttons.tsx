@@ -6,6 +6,7 @@ import {
   LeftActionButtons,
   RightActionButtons,
   Text,
+  TextContainer,
 } from './styles'
 
 const CardWithActionButtons: React.FC<CardWithActionButtonProps> = ({
@@ -17,16 +18,18 @@ const CardWithActionButtons: React.FC<CardWithActionButtonProps> = ({
   rightButtons,
 }) => (
   <Card>
-    {title && (
-      <Text centered={centeredText} variant="h3">
-        {title}
-      </Text>
-    )}
-    {description && (
-      <Text centered={centeredText} variant="body1">
-        {description}
-      </Text>
-    )}
+    <TextContainer>
+      {title && (
+        <Text centered={centeredText} variant="h3">
+          {title}
+        </Text>
+      )}
+      {description && (
+        <Text centered={centeredText} variant="body1">
+          {description}
+        </Text>
+      )}
+    </TextContainer>
     {children}
     <ActionButtonsContainer>
       <LeftActionButtons>{leftButtons}</LeftActionButtons>
