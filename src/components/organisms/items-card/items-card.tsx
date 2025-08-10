@@ -1,7 +1,7 @@
-import AddButton from '../atoms/buttons/add-button'
-import DeleteButton from '../atoms/buttons/delete-button'
-import RevertButton from '../atoms/buttons/revert-button'
-import ItemsBox from '../items-box'
+import AddButton from '../../atoms/buttons/add-button'
+import DeleteButton from '../../atoms/buttons/delete-button'
+import RevertButton from '../../atoms/buttons/revert-button'
+import ItemsBox from '../../molecules/items-box'
 import { Card } from './styles'
 import type { ItemsCardProps } from './types'
 

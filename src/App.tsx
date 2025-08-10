@@ -3,7 +3,7 @@ import './App.css'
 import { ThemeProvider } from '@mui/material'
 import theme from './styles/theme'
 import ItemsProvider from './shared/items-provider/items-provider'
-import MainPage from './components/page'
+import MainPage from './components/templates/page'
 
 function App() {
   return (

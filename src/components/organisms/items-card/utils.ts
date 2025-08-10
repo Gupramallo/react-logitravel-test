@@ -1,4 +1,4 @@
-import type { Item } from '../../shared/types'
+import type { Item } from '../../../shared/types'
 
 export const handleSelectedItem = ({
   items,

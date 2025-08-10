@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import Layout from '../layout'
-import ItemsCard from '../items-card'
-import { useItemsContext } from '../../shared/items-provider/context'
-import AddItemDialog from '../add-item-dialog'
+import Layout from '../../atoms/layout'
+import ItemsCard from '../../organisms/items-card'
+import { useItemsContext } from '../../../shared/items-provider/context'
+import AddItemDialog from '../../organisms/add-item-dialog'
 
 const MainPage: React.FC = () => {
   const [openDialog, setOpenDialog] = useState(false)

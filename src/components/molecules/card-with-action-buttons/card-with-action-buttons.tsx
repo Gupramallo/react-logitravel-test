@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../atoms/card'
+import Card from '../../atoms/card'
 import type { CardWithActionButtonProps } from './types'
 import {
   ActionButtonsContainer,
