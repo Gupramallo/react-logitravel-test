@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react'
 import { ITEMS_CONTEXT_DEFAULT_VALUES } from './constants'
-import type { ItemProviderValues } from './types'
+import type { ItemsStore } from './types'
 
-export const ItemsContext = createContext<ItemProviderValues>(
+export const ItemsContext = createContext<ItemsStore>(
   ITEMS_CONTEXT_DEFAULT_VALUES
 )
 

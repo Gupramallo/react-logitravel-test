@@ -1,6 +1,19 @@
 import type { Item } from '../types'
 import type { ACTIONS } from './constants'
 
+export type ItemsStore = {
+  items: Item[]
+  latestId: number
+  lastAction?: LastAction
+  setNewItem: (item: string) => void
+  setItems: (items: Item[]) => void
+  removeRevertLastAction: () => void
+  deleteItem: (id: number) => void
+  toggleItem: (id: number) => void
+  revertLastAction: () => void
+  deleteSelectedItems: () => void
+}
+
 export type PropsWithKey = {
   key: string
 }
@@ -16,12 +29,4 @@ export type SetStorage = PropsWithKey & {
 export type LastAction = {
   value: keyof typeof ACTIONS
   items?: Item[]
-}
-
-export type ItemProviderValues = {
-  items: Item[]
-  setItems: (value: Item[]) => void
-  removeRevertLastAction: () => void
-  setNewItem: (item: string) => void
-  lastAction?: LastAction
 }

@@ -2,16 +2,29 @@ import React, { useState } from 'react'
 
 import Layout from '../layout'
 import ItemsCard from '../items-card'
-import AddItemDialog from '../add-item-dialog'
 import { useItemsContext } from '../../shared/items-provider/context'
+import AddItemDialog from '../add-item-dialog'
 
 const MainPage: React.FC = () => {
   const [openDialog, setOpenDialog] = useState(false)
-  const { items } = useItemsContext()
+  const {
+    items,
+    toggleItem,
+    deleteItem,
+    deleteSelectedItems,
+    revertLastAction,
+  } = useItemsContext()
 
   return (
     <Layout>
-      <ItemsCard items={items} openDialog={() => setOpenDialog(true)} />
+      <ItemsCard
+        toggleItem={toggleItem}
+        items={items}
+        openDialog={() => setOpenDialog(true)}
+        deleteItem={deleteItem}
+        deleteSelectedItems={deleteSelectedItems}
+        revertLastAction={revertLastAction}
+      />
       <AddItemDialog
         open={openDialog}
         onClick={() => {}}

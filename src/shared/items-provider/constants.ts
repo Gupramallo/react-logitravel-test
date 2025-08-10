@@ -1,9 +1,4 @@
-import type {
-  GetStorage,
-  ItemProviderValues,
-  PropsWithKey,
-  SetStorage,
-} from './types'
+import type { GetStorage, ItemsStore, PropsWithKey, SetStorage } from './types'
 
 export const STORAGE_KEYS = {
   items: 'items',
@@ -30,10 +25,15 @@ export const STORAGE = {
   },
 }
 
-export const ITEMS_CONTEXT_DEFAULT_VALUES: ItemProviderValues = {
+export const ITEMS_CONTEXT_DEFAULT_VALUES: ItemsStore = {
   items: [],
+  lastAction: undefined,
+  latestId: 0,
   setItems: () => {},
   removeRevertLastAction: () => {},
   setNewItem: () => {},
-  lastAction: undefined,
+  toggleItem: () => {},
+  deleteItem: () => {},
+  revertLastAction: () => {},
+  deleteSelectedItems: () => {},
 }

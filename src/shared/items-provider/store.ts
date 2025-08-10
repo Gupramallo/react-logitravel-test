@@ -1,20 +1,10 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { Item } from '../types'
-import type { LastAction } from './types'
+import type { ItemsStore } from './types'
 import { ACTIONS } from './constants'
-
-type ItemsStore = {
-  items: Item[]
-  latestId: number
-  lastAction?: LastAction
-  setNewItem: (item: string) => void
-  setItems: (items: Item[]) => void
-  removeRevertLastAction: () => void
-  deleteItem: (id: number) => void
-  toggleItem: (id: number) => void
-  revertLastAction: () => void
-}
+import { handleDeleteSelectedItems, handleSelectedItem } from './utils/utils'
+import { handleRevertLastAction } from './utils/handle-revert-last-action'
 
 export const useItemsStore = create<ItemsStore>()(
   persist(
@@ -31,10 +21,6 @@ export const useItemsStore = create<ItemsStore>()(
           selected: false,
         }
         const updatedItems = [...items, newItem]
-
-        console.log('hmmmmm')
-
-        console.log('updatedItems', updatedItems)
 
         set({
           items: updatedItems,
@@ -72,35 +58,36 @@ export const useItemsStore = create<ItemsStore>()(
       toggleItem: (id: number) => {
         const { items } = get()
         set({
-          items: items.map((item) =>
-            item.id === id ? { ...item, selected: !item.selected } : item
-          ),
+          items: handleSelectedItem({ items, itemClickedId: id }),
         })
       },
 
       revertLastAction: () => {
         const { lastAction, items } = get()
 
-        if (!lastAction) return
+        if (!lastAction?.items || !items.length) return
 
-        if (lastAction.value === ACTIONS.add && lastAction.items) {
-          const idsToRemove = lastAction.items.map((item) => item.id)
-          set({
-            items: items.filter((item) => !idsToRemove.includes(item.id)),
-            lastAction: undefined,
-          })
+        const updatedItems = handleRevertLastAction({ lastAction, items })
 
-          return
-        }
+        set({
+          items: updatedItems,
+          lastAction: undefined,
+        })
+      },
 
-        if (lastAction.value === 'delete' && lastAction.items) {
-          set({
-            items: [...items, ...lastAction.items],
-            lastAction: undefined,
-          })
+      deleteSelectedItems: () => {
+        const { items } = get()
+        const { updatedItems, deletedItems } = handleDeleteSelectedItems({
+          items,
+        })
 
-          return
-        }
+        set({
+          items: updatedItems,
+          lastAction: {
+            value: ACTIONS.delete,
+            items: deletedItems,
+          },
+        })
       },
     }),
     {
