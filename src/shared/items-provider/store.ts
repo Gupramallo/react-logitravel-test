@@ -20,7 +20,6 @@ export const useItemsStore = create<ItemsStore>()(
           id: newId,
           selected: false,
         }
-        console.log(items)
         const updatedItems = [...items, newItem]
 
         set({
