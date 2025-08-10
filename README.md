@@ -23,6 +23,7 @@
 
 - **Vitest** 3.2.4 - Fast unit testing framework
 - **React Testing Library** 16.3.0 - Component testing utilities
+- **Storybook** 9.1.1 - Component development and documentation
 - **ESLint** - Code linting and quality enforcement
 - **jsdom** - DOM testing environment
 
@@ -68,6 +69,8 @@ yarn test
 - `yarn test` - Run test suite
 - `yarn test --coverage` - Run tests with coverage report
 - `yarn lint` - Run ESLint
+- `yarn storybook` - Start Storybook development server
+- `yarn build-storybook` - Build Storybook for production
 
 ## Testing Commands
 
