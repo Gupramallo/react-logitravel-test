@@ -10,10 +10,6 @@ const meta: Meta = {
     layout: 'centered',
   },
   argTypes: {
-    variant: {
-      control: 'select',
-      options: ['text', 'outlined', 'contained'],
-    },
     centeredText: {
       control: 'boolean',
     },
@@ -22,7 +18,6 @@ const meta: Meta = {
     title: 'Card title',
     description: 'Card description',
     centeredText: false,
-    variant: 'contained',
     showLeftButtons: true,
     showRightButtons: true,
   },
