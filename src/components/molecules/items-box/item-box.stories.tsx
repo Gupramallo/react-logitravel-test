@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import ItemsBox from './items-box'
 
 const meta: Meta = {
-  title: 'Molecules/Item Box',
+  title: 'Molecules/Items Box',
   parameters: {
     layout: 'centered',
   },
@@ -22,7 +22,7 @@ const meta: Meta = {
 
 export default meta
 
-export const ItemBoxStory: StoryObj<{
+export const ItemsBoxStory: StoryObj<{
   numberOfItems: number
   selected: boolean
 }> = {
