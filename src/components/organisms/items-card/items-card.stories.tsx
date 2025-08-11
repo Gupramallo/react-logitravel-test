@@ -12,7 +12,7 @@ const meta: Meta = {
 
 export default meta
 
-export const AddItemDialogStory: StoryObj<{
+export const ItemsCardStory: StoryObj<{
   numberOfItems: number
   open: boolean
 }> = {
